@@ -26,39 +26,66 @@ window.onload = function() {
         }
 
         interactObj.SigSendMessageToJS.connect(function(str1,str2,str3,str4,str5,str6,str7,str8,str9) {       //接收信号，响应函数
-            document.getElementById("value1").value = str1;
-            document.getElementById("value2").value = str2;
-            document.getElementById("value3").value = str3;
-            document.getElementById("value4").value = str4;
-            document.getElementById("value5").value = str5;
-            document.getElementById("value6").value = str6;
-            document.getElementById("value7").value = str7;
-            document.getElementById("value8").value = str8;
-            document.getElementById("value9").value = str9;
+            document.getElementById("data1").value = str1;
+            document.getElementById("data2").value = str2;
+            document.getElementById("data3").value = str3;
+            document.getElementById("data4").value = str4;
+            document.getElementById("data5").value = str5;
+            document.getElementById("data6").value = str6;
+            document.getElementById("data7").value = str7;
+            document.getElementById("data8").value = str8;
+            document.getElementById("data9").value = str9;
+            alert("success")
+        });
     });
 }
 </script>
 </head>
 <body>
-<p align="center">data1:
-<input type="text" id="data1"></input><br />
-data2:
-<input type="text" id="data2"></input><br />
-data3:
-<input type="text" id="data3"></input><br />
-data4:
-<input type="text" id="data4"></input><br />
-data5:
-<input type="text" id="data5"></input><br />
-data6:
-<input type="text" id="data6"></input><br />
-data7:
-<input type="text" id="data7"></input><br />
-data8:
-<input type="text" id="data8"></input><br />
-data9:
-<input type="text" id="data9"></input><br />
+<table border="1px" cellpadding="10" style="margin:40px auto;border-collapse:collapse;">
+        <tr>
+             <th style="width:600px;">检 查 项 目</th>
+            <th style="width:30px;">结果</th>
+        </tr>
+        <tr>
+            <td><input value="" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data1" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input value="" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data2" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input value="" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data3" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input value="" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data4" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input value="" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data5" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input value="" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data6" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input value="" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data7" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input value="" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data8" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input value="" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data9" style="border:none;" /></td>
+        </tr>
+    </table>
 <br/>
+<p align="center">
 <input type="submit" id="send" onclick="javascript:click();" value="export"></input></p>
 
 </body>

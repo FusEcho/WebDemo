@@ -9,5 +9,5 @@
 	<data name="data6" id="data6" data-type="string" value="60" unit="A"/>
 	<data name="data7" id="data7" data-type="string" value="70" unit="A"/>
 	<data name="data8" id="data8" data-type="string" value="80" unit="A"/>
-	<data name="data9" id="data" data-type="string9" value="90" unit="A"/>
+        <data name="data9" id="data9" data-type="string" value="90" unit="A"/>
 </dataset>

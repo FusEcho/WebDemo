@@ -1,6 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QDomElement>
+#include <QDomNode>
+#include <QFile>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -25,7 +29,22 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::OnSendMessByInteractObj(){
     qDebug() << "import_btn clicked";
-    QString data1, data2, data3, data4, data5, data6, data7, data8, data9;
+    // PARSE xml FILE
+//    QDomDocument doc;
+//    QFile file("qrc://html/data.xml");
+//    if (!file.open(QIODevice::ReadOnly))
+//        return;
+
+//    if (!doc.setContent(&file)){
+//        file.close();
+//        return;
+//    }
+
+//    file.close();
+
+//    QDomNode
+
+    QString data1="10", data2="20", data3="30", data4="40", data5="50", data6="60", data7="70", data8="80", data9="90";
     emit SigSendMessageToJS(data1, data2, data3, data4, data5, data6, data7, data8, data9);
 }
 
@@ -42,6 +61,7 @@ void MainWindow::OnReceiveMessageFromJS(QString data1, QString data2, QString da
     qDebug() << "receive data7 : " << data7 << endl;
     qDebug() << "receive data8 : " << data8 << endl;
     qDebug() << "receive data9 : " << data9 << endl;
+
 
 }
 
