@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Demo
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="qrc://html/qwebchannel.js"></script>
+<script language="javascript">
+window.onload = function() {
+
+    new QWebChannel(qt.webChannelTransport, function(channel) {    //浏览器内核自带，创建通道对象
+        var interactObj = channel.objects.interactObj;             //注册对象名需要对应QT中
+        document.getElementById("send").onclick = function(){          //发送消息给QT
+            var value1 = document.getElementById("data1").value;
+            var value2 = document.getElementById("data2").value;
+            var value3 = document.getElementById("data3").value;
+            var value4 = document.getElementById("data4").value;
+            var value5 = document.getElementById("data5").value;
+            var value6 = document.getElementById("data6").value;
+            var value7 = document.getElementById("data7").value;
+            var value8 = document.getElementById("data8").value;
+            var value9 = document.getElementById("data9").value;
+
+            interactObj.JSSendMessage(value1,value2,value3,value4,value5,value6,value7,value8,value9);
+        }
+
+        interactObj.SigSendMessageToJS.connect(function(str1,str2,str3,str4,str5,str6,str7,str8,str9) {       //接收信号，响应函数
+            document.getElementById("value1").value = str1;
+            document.getElementById("value2").value = str2;
+            document.getElementById("value3").value = str3;
+            document.getElementById("value4").value = str4;
+            document.getElementById("value5").value = str5;
+            document.getElementById("value6").value = str6;
+            document.getElementById("value7").value = str7;
+            document.getElementById("value8").value = str8;
+            document.getElementById("value9").value = str9;
+    });
+}
+</script>
+</head>
+<body>
+<p align="center">data1:
+<input type="text" id="data1"></input><br />
+data2:
+<input type="text" id="data2"></input><br />
+data3:
+<input type="text" id="data3"></input><br />
+data4:
+<input type="text" id="data4"></input><br />
+data5:
+<input type="text" id="data5"></input><br />
+data6:
+<input type="text" id="data6"></input><br />
+data7:
+<input type="text" id="data7"></input><br />
+data8:
+<input type="text" id="data8"></input><br />
+data9:
+<input type="text" id="data9"></input><br />
+<br/>
+<input type="submit" id="send" onclick="javascript:click();" value="export"></input></p>
+
+</body>
+</html>
