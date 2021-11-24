@@ -23,6 +23,7 @@ window.onload = function() {
             var value9 = document.getElementById("data9").value;
 
             interactObj.JSSendMessage(value1,value2,value3,value4,value5,value6,value7,value8,value9);
+            alert("export success")
         }
 
         interactObj.SigSendMessageToJS.connect(function(str1,str2,str3,str4,str5,str6,str7,str8,str9) {       //接收信号，响应函数
@@ -35,7 +36,7 @@ window.onload = function() {
             document.getElementById("data7").value = str7;
             document.getElementById("data8").value = str8;
             document.getElementById("data9").value = str9;
-            alert("success")
+            <!--alert("success")-->
         });
     });
 }
