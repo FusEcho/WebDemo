@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Demo
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="qrc:/jquery.js"></script>
+<script type="text/javascript" src="qrc:/signal.js"></script>
+</head>
+<body>
+<table border="1px" cellpadding="10" style="margin:40px auto;border-collapse:collapse;">
+        <tr>
+             <th style="width:600px;">检 查 项 目</th>
+            <th style="width:30px;">结果</th>
+        </tr>
+        <tr>
+            <td><input disabled="disabled" value="检查电流互感器二次绕组、电压互感器二次、三次绕组二次回路接线正确性及端子排引线螺钉压接的可靠性" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data1" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input disabled="disabled" value="检查电流互感器、电压互感器二次回路接地情况是否正确" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data2" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input disabled="disabled" value="检查电压互感器端子箱处是否将每组二次回路中性点分别经放电间隙或氧化锌阀片接地，一般当用1000V绝缘电阻表时，金属氧化物避雷器不应击穿，而用2500V绝缘电阻表时，则应可靠击穿" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data3" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input disabled="disabled" value="检查串联在电压回路中的熔断器（自动开关）、隔离开关及切换设备触点接触可靠" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data4" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input disabled="disabled" value="测量电压回路自互感器引出端子到配电屏电压母线的每相直流电阻，并计算电压互感器在额定容量下的压降，其值不应超过额定电压的3%" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data5" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input disabled="disabled" value="电流互感器、电压互感器二次绕组应满足双重化配置要求" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data6" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input disabled="disabled" value="电流互感器保护与测量、计量绕组应防止交叉使用" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data7" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input disabled="disabled" value="主变本体高、中侧间隙、零序、套管电流互感器应核对本体二次接线柱到末端的二次接线正确性" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data8" style="border:none;" /></td>
+        </tr>
+        <tr>
+            <td><input disabled="disabled" value="备用绕组应引至端子排并短路接地" style="border:none;width:580px;" /></td>
+            <td><input value="" id="data9" style="border:none;" /></td>
+        </tr>
+    </table>
+<br/>
+<p align="center">
+<input type="submit" id="send" onclick="slot2()" value="export"></input></p>
+
+</body>
+</html>
