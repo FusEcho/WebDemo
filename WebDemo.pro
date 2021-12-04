@@ -16,10 +16,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    QJsonArray.cpp \
+    QJsonDocument.cpp \
+    QJsonObject.cpp \
+    QJsonParseError.cpp \
+    QJsonParser.cpp \
+    QJsonValue.cpp \
+    QJsonValueRef.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    QJsonArray.h \
+    QJsonDocument.h \
+    QJsonObject.h \
+    QJsonParseError.h \
+    QJsonParser.h \
+    QJsonRoot.h \
+    QJsonValue.h \
+    QJsonValueRef.h \
     mainwindow.h
 
 FORMS += \
@@ -31,4 +46,12 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+    html.qrc \
     html.qrc
+
+DISTFILES += \
+    WebDemo.pro.user \
+    data.xml \
+    index.html \
+    jquery.js \
+    signal.js

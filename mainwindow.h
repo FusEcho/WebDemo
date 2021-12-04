@@ -3,10 +3,11 @@
 
 #include <QMainWindow>
 #include <QtWebKit>
-#include <QMap>
+#include <QList>
 #include <QDomElement>
 #include <QDomNode>
 #include <QFile>
+#include <QVariant>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,20 +23,21 @@ public:
 
 signals:
     void signal();
-    void sendstr(QMap<QString, QVariant> object);
+    void sendstr(QVariant object);
 
 public slots:
     void populateJavaScriptWindowObject();
-    void setValues(const QString &data1, const QString &data2,
-                   const QString &data3, const QString &data4,
-                   const QString &data5, const QString &data6,
-                   const QString &data7, const QString &data8,
-                   const QString &data9);
+//    void setValues(const QString &data1, const QString &data2,
+//                   const QString &data3, const QString &data4,
+//                   const QString &data5, const QString &data6,
+//                   const QString &data7, const QString &data8,
+//                   const QString &data9);
+    void setValues(QVariant obj);
 
     void getValues();
 
 private:
     Ui::MainWindow *ui;
-    QMap<QString, QVariant> str;
+    QVariant str;
 };
 #endif // MAINWINDOW_H
