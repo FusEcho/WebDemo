@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QTimer>
 #include <QUrl>
 #include <QFrame>
 #include <QDebug>
@@ -17,10 +18,20 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->webview->setUrl(QUrl("qrc:/index.html"));
 
+    QTimer *timer = new QTimer(this);
+    timer->setInterval(500);
+
+    connect(timer,SIGNAL(timeout()), this, SLOT(onTime()));
+    timer->start();
+
     connect(ui->webview->page()->mainFrame(),SIGNAL(javaScriptWindowObjectCleared()),this,SLOT(populateJavaScriptWindowObject()));
     connect(ui->import_btn,SIGNAL(clicked()),this,SLOT(getValues()));
 }
 
+void MainWindow::onTime(){
+    qDebug() << "timer called";
+    emit update();
+}
 
 void MainWindow::populateJavaScriptWindowObject()
 {

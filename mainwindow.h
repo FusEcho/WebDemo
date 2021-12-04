@@ -24,6 +24,7 @@ public:
 signals:
     void signal();
     void sendstr(QVariant object);
+    void update();
 
 public slots:
     void populateJavaScriptWindowObject();
@@ -33,11 +34,12 @@ public slots:
 //                   const QString &data7, const QString &data8,
 //                   const QString &data9);
     void setValues(QVariant obj);
-
+    void onTime();
     void getValues();
 
 private:
     Ui::MainWindow *ui;
     QVariant str;
+    QTimer *timer;
 };
 #endif // MAINWINDOW_H

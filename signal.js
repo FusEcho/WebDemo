@@ -2,6 +2,7 @@
 $(document).ready(function() {
   try {
     mainWindow.sendstr.connect(slot1);
+    mainWindow.update.connect(update);
   }
   catch(e) {
     alert(e);
@@ -38,4 +39,8 @@ function slot1(object) {
     document.getElementById("data8").value = obj.data8;
     document.getElementById("data9").value = obj.data9;
     alert("import success");
+}
+
+function update()
+{
 }
